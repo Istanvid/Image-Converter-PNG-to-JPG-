@@ -1,0 +1,12 @@
+# image_converter.py
+
+from PIL import Image
+
+def convert_image(input_path, output_path):
+    with Image.open(input_path) as img:
+        rgb_img = img.convert("RGB")
+        rgb_img.save(output_path, "JPEG")
+        print("Image converted successfully!")
+
+# Sample usage
+convert_image("example.png", "example.jpg")
